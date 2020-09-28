@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public NavMeshAgent navMeshAgent;
     public Transform target;
 
     public void SetTarget(Transform newTarget)

@@ -15,7 +15,7 @@ public class FieldOfView : MonoBehaviour
 
     void Start()
 	{
-		StartCoroutine(FindTargetsWithDelay(5f));
+		StartCoroutine(FindTargetsWithDelay(2f));
 	}
 
 	IEnumerator FindTargetsWithDelay(float cooldown)
@@ -67,6 +67,7 @@ public class FieldOfView : MonoBehaviour
 	void FindVisibleTargets()
 	{
 		enemyBehaviour.SetTarget(null);
+		hasSeenPlayer = false;
 
 		Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 		Transform finalTarget = null;
@@ -82,7 +83,6 @@ public class FieldOfView : MonoBehaviour
 				if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
 				{
 					hasSeenPlayer = true;
-					StartCoroutine(ForgetPlayer());
 					finalTarget = target;
 					break;
 				}
@@ -91,12 +91,6 @@ public class FieldOfView : MonoBehaviour
 
 		enemyBehaviour.SetTarget(finalTarget);
 	}
-
-	IEnumerator ForgetPlayer()
-    {
-		yield return new WaitForSeconds(3f);
-		hasSeenPlayer = false;
-    }
 
 	public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
 	{

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SwordEnemyBehaviour : EnemyBehaviour
 {
@@ -11,15 +12,50 @@ public class SwordEnemyBehaviour : EnemyBehaviour
     public bool isCooldown = false;
     public int speed = 5;
     Animator animator;
+    Vector3 initialPosition;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        initialPosition = transform.position;
     }
 
     private void Update()
     {
-        if(target) { AttackRadius(); if (!isAttacking) { LookTarget(); } }
+        if(target)
+        {
+            animator.applyRootMotion = true;
+            navMeshAgent.enabled = false;
+            AttackRadius();
+            if (!isAttacking)
+            {
+                LookTarget();
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
+        }
+        else
+        {
+            animator.applyRootMotion = false;
+            navMeshAgent.enabled = true;
+            SetEnemyDestination(initialPosition);
+            if(navMeshAgent.velocity.magnitude > 0f)
+            {
+                animator.SetBool("IsWalking", true);
+            }
+            else
+            { animator.SetBool("IsWalking", false); }
+        }
+    }
+
+    void SetEnemyDestination(Vector3 position)
+    {
+        
+        navMeshAgent.SetDestination(position);
     }
 
     void LookTarget()
