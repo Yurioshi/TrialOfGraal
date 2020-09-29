@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class MeleeEnemyBehaviour : EnemyBehaviour
 {
-    public float attackCooldown;
-    public bool isCooldown = false;
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -40,6 +37,7 @@ public class MeleeEnemyBehaviour : EnemyBehaviour
             SetEnemyDestination(initialPosition);
             if (Vector3.Distance(transform.position, initialPosition) > 0.2f) { isWalking = true; }
         }
+
         Walk(isWalking);
     }
 
