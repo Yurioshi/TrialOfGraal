@@ -11,7 +11,9 @@ public class EnemyBehaviour : MonoBehaviour
     public LayerMask targetLayer;
     public float attackDistance;
     public float lookSpeed;
+    public float attackCooldown;
     protected bool isAttacking;
+    public bool isCooldown = false;
     protected Vector3 initialPosition;
 
     public void SetTarget(Transform newTarget)
