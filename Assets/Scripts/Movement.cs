@@ -30,11 +30,6 @@ public class Movement : MonoBehaviour
         //isInAir = !cc.isGrounded;
 
         LocomotionAnimatons(input);
-
-        if (Input.GetKeyDown(KeyCode.Space) && !MeleeAttack.isAttacking && !Block.isBlocking)
-        {
-            Dash();
-        }
     }
     void FixedUpdate()
     {
@@ -74,19 +69,5 @@ public class Movement : MonoBehaviour
         animator.SetFloat("InputX", input.x);
         animator.SetFloat("InputY", input.y);
         animator.SetFloat("Speed", speed, 0.1f, Time.deltaTime);
-    }
-    void Dash()
-    {
-        if(!isInAir)
-        {
-            isInAir = true;
-            Vector3 jumpDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-            if(jumpDirection.magnitude != 0)
-            {
-                jumpDirection = transform.TransformDirection(jumpDirection);
-                jumpDirection.y = .3f;
-                velocity = jumpDirection.normalized * dashForce;
-            }
-        }
     }
 }

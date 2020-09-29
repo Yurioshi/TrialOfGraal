@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   inAir: 0
+  shootedByPlayer: 1
+  damage: 20
 --- !u!54 &1024635519
 Rigidbody:
   m_ObjectHideFlags: 0
