@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public LayerMask enemyLayer;
     public Transform[] raycastPoints = new Transform[0];
-    public float weaponDamage;
+    public int weaponDamage;
     public bool canDamage;
     public string weaponName;
     protected RaycastHit hit;
@@ -30,12 +30,12 @@ public class Weapon : MonoBehaviour
             if(collide)
             {
                 canDamage = false;
-                DoDamage(hit.collider.GetComponent<Enemy>());
+                DoDamage(hit.collider.GetComponent<EntityManager>());
                 break;
             }
         }
     }
-    void DoDamage(Enemy enemy)
+    void DoDamage(EntityManager enemy)
     {
         enemy.TakeDamage(weaponDamage);
     }

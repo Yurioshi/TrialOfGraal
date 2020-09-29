@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     MeleeAttack meleeAttack;
     RangedAttack rangedAttack;
     Block block;
+    public static bool pimba = true;
 
     void Awake()
     {
@@ -119,6 +120,4 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-
-    public static bool pimba = true;
 }
