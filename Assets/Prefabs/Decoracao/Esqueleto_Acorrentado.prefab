@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3085523203415656597}
   - component: {fileID: 6308133222234452643}
   - component: {fileID: 339587280892333658}
+  - component: {fileID: -4279431562389595794}
   m_Layer: 0
   m_Name: Esqueleto_Acorrentado
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4279431562389595794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056635235327949446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6607874596314299391, guid: 2b41ef225b918394e90a8d541b6f1cc6, type: 3}
