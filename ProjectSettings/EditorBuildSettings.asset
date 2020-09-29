@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AtualizacaoMovimentacao.unity
     guid: f2707bd188202c148b48ca4c183e3a2b
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: 6c78d865f7bb9d04b9f44ca9b4547f1a
   m_configObjects: {}
