@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1613472063255582677
+--- !u!1 &2385368703826857888
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 950778917007130902}
-  - component: {fileID: 1143924862}
-  - component: {fileID: 4631250888281018772}
-  - component: {fileID: 2972526802003890982}
+  - component: {fileID: 1233835208675905650}
+  - component: {fileID: 4091686057737072038}
+  - component: {fileID: 5861434547423342085}
+  - component: {fileID: 7382691491549689887}
   m_Layer: 9
-  m_Name: Arco
+  m_Name: Escudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &950778917007130902
+--- !u!4 &1233835208675905650
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613472063255582677}
+  m_GameObject: {fileID: 2385368703826857888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.009999998, y: 0.01, z: 0.0100000035}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6474307166091453978}
+  - {fileID: 7190097360649026106}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1143924862
+--- !u!114 &4091686057737072038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613472063255582677}
+  m_GameObject: {fileID: 2385368703826857888}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ba04a1803e80a2478511a767f6816f6, type: 3}
@@ -52,37 +52,37 @@ MonoBehaviour:
   raycastPoints: []
   weaponDamage: 0
   canDamage: 0
-  weaponName: Arco
---- !u!54 &4631250888281018772
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613472063255582677}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &2972526802003890982
+  weaponName: Escudo
+--- !u!65 &5861434547423342085
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613472063255582677}
+  m_GameObject: {fileID: 2385368703826857888}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.187047, y: 0.09685457, z: 0.33011663}
-  m_Center: {x: 0, y: 0.0018137097, z: 0.015618861}
---- !u!1 &8034991043314406409
+  m_Size: {x: 0.9525683, y: 1.2276726, z: 0.15097123}
+  m_Center: {x: 0, y: -0.45534492, z: -0.06403282}
+--- !u!54 &7382691491549689887
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2385368703826857888}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &6166275254812641321
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,9 +90,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6474307166091453978}
-  - component: {fileID: 2630764842812349484}
-  - component: {fileID: 8628566778808721621}
+  - component: {fileID: 7190097360649026106}
+  - component: {fileID: 2203207771308572684}
+  - component: {fileID: 5597926646376152309}
   m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
@@ -100,35 +100,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6474307166091453978
+--- !u!4 &7190097360649026106
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8034991043314406409}
+  m_GameObject: {fileID: 6166275254812641321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.11666137, z: 0.11666137}
+  m_LocalPosition: {x: 0, y: -0.45, z: -0.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 950778917007130902}
+  m_Father: {fileID: 1233835208675905650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2630764842812349484
+--- !u!33 &2203207771308572684
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8034991043314406409}
-  m_Mesh: {fileID: -5495902117074765545, guid: e4c95c98bd945ed4dbf5fd8bf3e51f55, type: 3}
---- !u!23 &8628566778808721621
+  m_GameObject: {fileID: 6166275254812641321}
+  m_Mesh: {fileID: -5495902117074765545, guid: 0335744a0c9aaf04187986bd3a2c98aa, type: 3}
+--- !u!23 &5597926646376152309
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8034991043314406409}
+  m_GameObject: {fileID: 6166275254812641321}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -140,7 +140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: e4c95c98bd945ed4dbf5fd8bf3e51f55, type: 3}
+  - {fileID: 2100000, guid: 5443d13670dad9a4e81f7ad3a45d5598, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
