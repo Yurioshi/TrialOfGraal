@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChargingBehaviour : StateMachineBehaviour
 {
-    RangerEnemyBehaviour enemyBehaviour;
+    OldRangerEnemyBehaviour enemyBehaviour;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyBehaviour = animator.gameObject.GetComponent<RangerEnemyBehaviour>();
+        enemyBehaviour = animator.gameObject.GetComponent<OldRangerEnemyBehaviour>();
         if(!enemyBehaviour.arco.hasArrow)
         {
             enemyBehaviour.Recharge();

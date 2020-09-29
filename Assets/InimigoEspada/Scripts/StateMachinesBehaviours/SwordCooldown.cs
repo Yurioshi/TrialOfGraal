@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SwordCooldown : StateMachineBehaviour
 {
-    SwordEnemyBehaviour enemyBehaviour;
+    MeleeEnemyBehaviour enemyBehaviour;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<SwordEnemyBehaviour>().StartAttackCooldown(); ;
+        animator.GetComponent<MeleeEnemyBehaviour>().StartAttackCooldown(); ;
     }
 }

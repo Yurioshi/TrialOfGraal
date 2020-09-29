@@ -8,12 +8,12 @@ public class AimBehaviour : StateMachineBehaviour
     public LayerMask targetLayer;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<RangerEnemyBehaviour>().DoCoroutine(Aim(animator));
+        animator.GetComponent<OldRangerEnemyBehaviour>().DoCoroutine(Aim(animator));
     }
 
     IEnumerator Aim(Animator animator)
     {
-        RangerEnemyBehaviour rangerEnemy = animator.GetComponent<RangerEnemyBehaviour>();
+        OldRangerEnemyBehaviour rangerEnemy = animator.GetComponent<OldRangerEnemyBehaviour>();
         yield return new WaitForSeconds(3);
         bool aiming = true;
         while(aiming)
