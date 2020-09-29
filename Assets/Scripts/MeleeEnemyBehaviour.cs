@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class MeleeEnemyBehaviour : EnemyBehaviour
 {
-    public LayerMask targetLayer;
     public float attackCooldown;
     public bool isCooldown = false;
 

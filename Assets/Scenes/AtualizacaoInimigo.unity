@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 126572730}
   - component: {fileID: 126572729}
   - component: {fileID: 126572728}
+  - component: {fileID: 126572731}
   - component: {fileID: 126572727}
   m_Layer: 8
   m_Name: RangedEnemy
@@ -327,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &126572727
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -408,6 +409,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &126572731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126572726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5c4dd4d338f504091c12560f591ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130547648
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,16 +7967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91353d33f74c96a4485a62781c6d5405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3410371230338112622}
-  navMeshAgent: {fileID: 8612369619572851466}
-  target: {fileID: 0}
-  attackDistance: 3
-  lookSpeed: 5
-  isAttacking: 0
-  initialPosition: {x: 0, y: 0, z: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 1024
+  attackDistance: 3
+  lookSpeed: 5
   attackCooldown: 1.5
   isCooldown: 0
 --- !u!114 &8612369619572851465

@@ -5,13 +5,14 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public Animator animator;
-    public NavMeshAgent navMeshAgent;
-    public Transform target;
+    protected Animator animator;
+    protected NavMeshAgent navMeshAgent;
+    protected Transform target;
+    public LayerMask targetLayer;
     public float attackDistance;
     public float lookSpeed;
-    public bool isAttacking;
-    public Vector3 initialPosition;
+    protected bool isAttacking;
+    protected Vector3 initialPosition;
 
     public void SetTarget(Transform newTarget)
     {
