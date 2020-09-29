@@ -920,7 +920,7 @@ MonoBehaviour:
     m_Bits: 1024
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4096
 --- !u!114 &7721831299510545653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,8 +936,8 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 1024
-  attackDistance: 10
-  lookSpeed: 5
+  attackDistance: 15
+  lookSpeed: 10
   attackCooldown: 3
   isCooldown: 0
   flechaPrefab: {fileID: 3857861875384023345, guid: b1713d09d242fe747864284ad204053f,
