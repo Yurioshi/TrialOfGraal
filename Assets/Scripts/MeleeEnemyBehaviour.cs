@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class MeleeEnemyBehaviour : EnemyBehaviour
 {
+    public Weapon sword; 
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -53,5 +54,15 @@ public class MeleeEnemyBehaviour : EnemyBehaviour
         yield return new WaitForSeconds(cooldown);
         isCooldown = false;
         animator.SetTrigger("CooldownOver");
+    }
+
+    public void CanDamage()
+    {
+        sword.canDamage = true;
+    }
+
+    public void CantDamage()
+    {
+        sword.canDamage = false;
     }
 }

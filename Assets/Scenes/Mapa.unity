@@ -47378,6 +47378,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1815407420, guid: 9ab3e00c2d20b4d40aa9b14005d69dfb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815407420, guid: 9ab3e00c2d20b4d40aa9b14005d69dfb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1660498844014453505, guid: 9ab3e00c2d20b4d40aa9b14005d69dfb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47437,11 +47445,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6257003704329260159, guid: 9ab3e00c2d20b4d40aa9b14005d69dfb,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ab3e00c2d20b4d40aa9b14005d69dfb, type: 3}

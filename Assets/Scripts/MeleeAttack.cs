@@ -62,7 +62,9 @@ public class MeleeAttack : MonoBehaviour
 
     public void StartMeleeAttack(string triggerName)
     {
+        if(attackCombo == 1) { weaponManager.actualWeapon.ResetWeaponDamage(); }
         attackCombo++;
+        weaponManager.actualWeapon.weaponDamage *= attackCombo;
         StartCoroutine(Attack(triggerName));
     }
 

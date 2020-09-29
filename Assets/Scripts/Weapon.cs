@@ -6,10 +6,16 @@ public class Weapon : MonoBehaviour
 {
     public LayerMask enemyLayer;
     public Transform[] raycastPoints = new Transform[0];
+    int originalDamage;
     public int weaponDamage;
     public bool canDamage;
     public string weaponName;
     protected RaycastHit hit;
+
+    private void Awake()
+    {
+        originalDamage = weaponDamage;
+    }
 
     private void Update()
     {
@@ -38,5 +44,9 @@ public class Weapon : MonoBehaviour
     void DoDamage(EntityManager enemy)
     {
         enemy.TakeDamage(weaponDamage);
+    }
+    public void ResetWeaponDamage()
+    {
+        weaponDamage = originalDamage;
     }
 }
