@@ -10,6 +10,7 @@ public class Flecha : MonoBehaviour
     //public Transform[] arrowRaycastPoints1;
     //public Transform[] arrowRaycastPoints2;
     public bool inAir = false;
+    public bool shootedByPlayer = true;
     //RaycastHit hit;
 
     private void Awake()
@@ -34,14 +35,18 @@ public class Flecha : MonoBehaviour
     {
         if(inAir)
         {
-            if (other.gameObject.layer != 9 && other.gameObject.layer != 10)
+            if (other.gameObject.layer != 9) //&& other.gameObject.layer != 10)
             {
-                Debug.Log(other.name);
-                inAir = false;
-                rb.isKinematic = true;
-                if (other.gameObject.layer == 8)
+                if(shootedByPlayer && other.gameObject.layer != 10 || !shootedByPlayer && other.gameObject.layer != 11)
                 {
-                    other.GetComponent<Enemy>().TakeDamage(1);
+                    Debug.Log(other.name);
+                    inAir = false;
+                    rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+                    rb.isKinematic = true;
+                    if (other.gameObject.layer == 8)
+                    {
+                        other.GetComponent<Enemy>().TakeDamage(1);
+                    }
                 }
             }
         }

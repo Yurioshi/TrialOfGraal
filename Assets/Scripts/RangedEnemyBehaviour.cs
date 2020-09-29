@@ -88,7 +88,9 @@ public class RangedEnemyBehaviour : EnemyBehaviour
         currentArrow.transform.parent = null;
         currentArrow.rb.velocity = Vector3.zero;
         currentArrow.rb.isKinematic = false;
-        currentArrow.rb.AddForce(transform.TransformDirection(Vector3.forward) * 50f, ForceMode.Impulse);
+        currentArrow.rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        currentArrow.rb.AddForce(transform.TransformDirection(Vector3.forward) * 100f, ForceMode.Impulse);
+        currentArrow.shootedByPlayer = false;
         currentArrow.inAir = true;
     }
 

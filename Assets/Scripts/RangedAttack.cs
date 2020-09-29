@@ -10,6 +10,7 @@ public class RangedAttack : MonoBehaviour
     public Transform shootLocation;
     public Transform hand;
     public int arrowQuantity = 10;
+    public int arrowForceMultiplier = 50;
     public static bool isCharging = false;
     public static bool isAiming = false;
 
@@ -72,7 +73,7 @@ public class RangedAttack : MonoBehaviour
                 currentArrow.transform.parent = null;
                 currentArrow.rb.velocity = Vector3.zero;
                 currentArrow.rb.isKinematic = false;
-                currentArrow.rb.AddForce(transform.TransformDirection(Vector3.forward) * 50f, ForceMode.Impulse);
+                currentArrow.rb.AddForce(transform.TransformDirection(Vector3.forward) * arrowForceMultiplier, ForceMode.Impulse);
                 currentArrow.inAir = true;
                 yield return new WaitForEndOfFrame();
                 break;

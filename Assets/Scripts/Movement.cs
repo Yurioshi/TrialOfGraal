@@ -81,9 +81,12 @@ public class Movement : MonoBehaviour
         {
             isInAir = true;
             Vector3 jumpDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-            jumpDirection = transform.TransformDirection(jumpDirection);
-            jumpDirection.y = .3f;
-            velocity = jumpDirection.normalized * dashForce;
+            if(jumpDirection.magnitude != 0)
+            {
+                jumpDirection = transform.TransformDirection(jumpDirection);
+                jumpDirection.y = .3f;
+                velocity = jumpDirection.normalized * dashForce;
+            }
         }
     }
 }
