@@ -25,7 +25,7 @@ public class BossEnemyBehaviour : EnemyBehaviour
 
     private void Update()
     {
-        bool isWalking = true;
+        bool isWalking = false;
 
         if (target)
         {
@@ -45,7 +45,7 @@ public class BossEnemyBehaviour : EnemyBehaviour
                 }
 
                 LookTarget();
-                //isWalking = true;
+                isWalking = true;
             }
         }
 
