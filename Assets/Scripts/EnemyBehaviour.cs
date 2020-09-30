@@ -8,6 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     protected Animator animator;
     protected NavMeshAgent navMeshAgent;
     protected Transform target;
+    public Weapon weapon;
     public LayerMask targetLayer;
     public float attackDistance;
     public float lookSpeed;

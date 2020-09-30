@@ -14,6 +14,7 @@ public class RangedEnemyBehaviour : EnemyBehaviour
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        initialPosition = transform.position;
     }
 
     private void Update()

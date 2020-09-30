@@ -29,10 +29,11 @@ public class Weapon : MonoBehaviour
         for (int i = 0; i < (raycastPoints.Length - 1); i++)
         {
             Vector3 direction = (raycastPoints[(i + 1)].position - raycastPoints[i].position).normalized;
+            Debug.DrawRay(raycastPoints[i].position, direction, Color.red);
             float distance = Vector3.Distance(raycastPoints[i].position, raycastPoints[(i + 1)].position);
             Ray ray = new Ray(raycastPoints[i].position, direction);
             bool collide = Physics.Raycast(ray, out hit, distance, enemyLayer);
-            Debug.DrawRay(raycastPoints[i].position, direction);
+            
             if(collide)
             {
                 canDamage = false;
